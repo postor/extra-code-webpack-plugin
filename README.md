@@ -42,14 +42,14 @@ class ExtraCodeWebpackPlugin {
 
 ## 使用案例 | example use case 
 
-add hot reload
+HMR 增加 module.hot.accept 代码 | add HMR hot accept
 
 ```
 new ExtraCodeWebpackPlugin({ codes: ({ isDev, isEntry }) => (isEntry && isDev) ? `module.hot.accept()` : `` })
 ```
 
 
-add analytics code
+增加（谷歌/百度）统计代码 | add (google) analytics code
 
 ```
 new ExtraCodeWebpackPlugin({ codes: ({ modulePath,isDev }) => 
